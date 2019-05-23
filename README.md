@@ -15,6 +15,11 @@ Local kubernetes cluster
 
 For this purpose i used NGINX Ingress and Cert-Manager
 
+Metallb
+```bash
+kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.7.3/manifests/metallb.yaml
+```
+
 NGINX Ingress
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/mandatory.yaml

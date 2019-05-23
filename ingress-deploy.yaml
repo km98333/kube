@@ -3,6 +3,14 @@ kind: Ingress
 metadata:
   name: nginx-ingress
 spec:
-  backend:
-    serviceName: mystaticweb
-    servicePort: 80
+  tls:
+  - hosts:
+    - my-example.com
+    secretName: mycertificate
+  rules:
+  - host: my-example.com
+    http:
+      paths:
+      - backend:
+        serviceName: mystaticweb
+        servicePort: 80
